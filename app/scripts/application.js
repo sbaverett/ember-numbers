@@ -1,3 +1,5 @@
 'use strict';
 
-window.EmberNumbers = Ember.Application.create();
+var EmberNumbers = Ember.Application.create();
+
+require('./router')(EmberNumbers);
