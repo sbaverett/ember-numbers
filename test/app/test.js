@@ -35,7 +35,8 @@ describe('app', function() {
       fillIn('input[name="url"]', 'http://en.wikipedia.org/wiki/3_(number)');
       click('button[name="numbers"] a');
       andThen(function() {
-        expect(find('button[name="three"] a').to.exist);
+        expect(currentURL()).to.eql('/numbers');
+        expect(find('button[name="three"] a').length).to.eql(1);
       });
     });
   });
