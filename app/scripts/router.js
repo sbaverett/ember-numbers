@@ -4,6 +4,8 @@ module.exports = function(EmberNumbers) {
 
   EmberNumbers.Router.map(function() {
     this.route('numbers');
+    this.route('additions');
+    this.route('number');
   });
 
 };

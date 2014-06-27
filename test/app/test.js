@@ -23,4 +23,20 @@ describe('app', function() {
       });
     });
   });
+  describe('when visiting the numbers page', function() {
+    beforeEach(function() {
+      visit('/numbers');
+    });
+
+    it('lets the user add a new number', function() {
+      click('button[name="add"] a');
+      fillIn('input[name="numberName"]', 'three');
+      fillIn('input[name="anotherLanguage"]', 'tres');
+      fillIn('input[name="url"]', 'http://en.wikipedia.org/wiki/3_(number)');
+      click('button[name="numbers"] a');
+      andThen(function() {
+        expect(find('button[name="three"] a').to.exist);
+      });
+    });
+  });
 });

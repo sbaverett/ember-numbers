@@ -1,2 +1,9 @@
-<button name="home">{{#link-to 'numbers'}}Numbers{{/link-to}}</button>
+<button name="home">{{#link-to 'numbers'}}Home{{/link-to}}</button>
+<button name="numbers">{{#link-to 'numbers'}}Numbers{{/link-to}}</button>
+<nav>
+{{!--   {{#each}}
+ --}}    <button name={{numberName}}>{{#link-to 'number' id}} {{linkName}} {{/link-to}}</button>
+{{!--   {{/each}}
+ --}}</nav>
+<button name="add">{{#link-to 'additions'}}Add{{/link-to}}</button>
 {{outlet}}
