@@ -1,7 +1,7 @@
 'use strict';
 
 describe('app', function() {
-  it('lets the user move between templates', function() {
+  it('lets the user move from index to numbers', function() {
     visit('/');
     click('button[name="numbers"] a');
     andThen(function() {
@@ -10,5 +10,13 @@ describe('app', function() {
       expect(currentURL()).to.eql('/numbers');
     });
   });
-  it('will have more tests');
+  it('lets the user stay on index after clicking home button', function() {
+    visit('/');
+    click('button[name="home"] a');
+    andThen(function() {
+      expect(currentRouteName()).to.eql('index');
+      expect(currentPath()).to.eql('index');
+      expect(currentURL()).to.eql('/');
+    });
+  });
 });

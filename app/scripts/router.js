@@ -3,7 +3,7 @@
 module.exports = function(EmberNumbers) {
 
   EmberNumbers.Router.map(function() {
-    this.resource('numbers');
+    this.route('numbers');
   });
 
 };
